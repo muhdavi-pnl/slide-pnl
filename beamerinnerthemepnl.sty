@@ -1,0 +1,74 @@
+\mode<presentation>
+
+% Title page
+\defbeamertemplate*{title page}{pnl}[1][]
+{
+\begin{tikzpicture}
+	\useasboundingbox (1,0.1*\the\paperheight) rectangle(0.9*\the\paperwidth,\the\paperheight);
+	\node at (270/960*\the\paperwidth,330/720*\the\paperheight) {\includegraphics[scale=.4]{big-data.jpg}};
+		
+	\fill[right color=white, left color=pnlyellow] (0/900*\the\paperwidth,610/720*\the\paperheight) rectangle(0.72*\the\paperwidth,685/720*\the\paperheight);
+	\fill[color=pnlviolet] (65/960*\the\paperwidth,720/720*\the\paperheight) rectangle(155/960*\the\paperwidth,585/720*\the\paperheight);
+	\fill[color=pnlviolet] (65/960*\the\paperwidth,586/720*\the\paperheight) -- (155/960*\the\paperwidth,586/720*\the\paperheight) -- (110/960*\the\paperwidth,540/720*\the\paperheight) -- cycle;
+	\node at (110/960*\the\paperwidth,640/720*\the\paperheight) {\includegraphics[width=0.08\paperwidth, height=0.08\paperwidth]{logo-pnl.png}};
+	\node[text=pnlviolet] at (430/960*\the\paperwidth,647/720*\the\paperheight){POLITEKNIK NEGERI LHOKSEUMAWE};
+		
+	\node[text=pnlviolet, text width=0.6*\the\paperwidth, align= right] at (650/960*\the\paperwidth,360/720*\the\paperheight){\Large \inserttitle\par{~}	\insertdate\par{~}\par\normalsize \insertauthor\par};
+\end{tikzpicture}
+\vfill
+}
+
+% Items
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \fill[color=white] (0,2) rectangle (\the\paperwidth,\the\paperheight);
+  \fill[color=pnlyellow] (0,0) rectangle(0.72*\the\paperwidth,0.05*\the\paperheight);
+  \fill[color=pnlviolet] (0.72*\the\paperwidth,0) rectangle(\the\paperwidth,0.05*\the\paperheight);
+
+  \ifnum\thepage>1\relax% 
+	  \fill[right color=pnlyellow, left color=white] (250/900*\the\paperwidth,610/678*\the\paperheight) rectangle(890/900*\the\paperwidth,650/678*\the\paperheight);
+	  \fill[color=pnlviolet] (810/900*\the\paperwidth,580/678*\the\paperheight) rectangle(870/900*\the\paperwidth,670/678*\the\paperheight);
+	  \fill[color=pnlviolet] (810/900*\the\paperwidth,580/678*\the\paperheight) -- (870/900*\the\paperwidth,580/678*\the\paperheight) -- (840/900*\the\paperwidth,550/678*\the\paperheight) -- cycle;
+	  \node at (840/900*\the\paperwidth,620/678*\the\paperheight) {\includegraphics[width=0.05\paperwidth, height=0.05\paperwidth]{logo-pnl.png}};
+  \fi  
+
+  \node[text=pnlviolet] at (225/900*\the\paperwidth,17/678*\the\paperheight){Eleumee Beule Adab Beuna};
+  \node[text=pnlyellow] at (800/900*\the\paperwidth,17/678*\the\paperheight){www.pnl.ac.id} ;
+  \end{tikzpicture}
+}
+
+
+% Last page
+\defbeamertemplate*{lastpage}{ugm}[1][]
+{ 
+  \begin{tikzpicture}
+  \useasboundingbox (1,0.75*\the\paperheight) rectangle(0.8*\the\paperwidth,\the\paperheight);
+	\fill[right color=white, left color=pnlyellow] (0/900*\the\paperwidth,610/720*\the\paperheight) rectangle(0.72*\the\paperwidth,685/720*\the\paperheight);
+	\fill[color=pnlviolet] (65/960*\the\paperwidth,720/720*\the\paperheight) rectangle(155/960*\the\paperwidth,585/720*\the\paperheight);
+	\fill[color=pnlviolet] (65/960*\the\paperwidth,586/720*\the\paperheight) -- (155/960*\the\paperwidth,586/720*\the\paperheight) -- (110/960*\the\paperwidth,540/720*\the\paperheight) -- cycle;
+	\node at (110/960*\the\paperwidth,640/720*\the\paperheight) {\includegraphics[width=0.08\paperwidth, height=0.08\paperwidth]{logo-pnl.png}};
+	\node[text=pnlviolet] at (430/960*\the\paperwidth,647/720*\the\paperheight){POLITEKNIK NEGERI LHOKSEUMAWE};
+	\node[text=pnlviolet] at (380/960*\the\paperwidth,360/720*\the\paperheight){\LARGE Terima kasih};
+
+	 \fill[color=pnlyellow] (0,0) rectangle(0.72*\the\paperwidth,0.05*\the\paperheight);
+	 \fill[color=pnlviolet] (0.72*\the\paperwidth,0) rectangle(\the\paperwidth,0.05*\the\paperheight);
+
+	\node[text=pnlviolet] at (225/900*\the\paperwidth,17/678*\the\paperheight){Eleumee Beule Adab Beuna};
+	\node[text=pnlyellow] at (800/900*\the\paperwidth,17/678*\the\paperheight){www.pnl.ac.id} ;
+	
+	\node at (760/960*\the\paperwidth,330/720*\the\paperheight) {\includegraphics[height=0.4\paperwidth]{karakter-islami-1.png}};
+		
+	\draw[ultra thick, pnlviolet] (560/960*\the\paperwidth,140/720*\the\paperheight)--(560/960*\the\paperwidth,530/720*\the\paperheight);
+  \end{tikzpicture}
+  
+
+}
+
+
+\mode
+<all>
